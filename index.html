@@ -63,9 +63,12 @@
     .utility {
       min-height: 64px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 18px;
+      column-gap: 18px;
+      row-gap: 8px;
+      padding-block: 10px;
       border-bottom: 1px solid var(--line);
     }
     .availability {
@@ -238,13 +241,13 @@
     .copy-btn { border: 0; background: none; color: var(--amber); text-decoration: underline; cursor: pointer; font: 600 .78rem "Manrope", sans-serif; padding: 8px; }
     .copy-status { min-height: 1em; color: #93d5b0; font-size: .75rem; }
 
-    .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; flex: none; }
-    .brand img { width: 42px; height: 42px; }
-    .brand-word { display: grid; line-height: 1.14; }
-    .brand-name { font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; color: var(--ink); white-space: nowrap; }
+    .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; flex: 0 1 auto; min-width: 0; }
+    .brand img { width: 42px; height: 42px; flex: none; }
+    .brand-word { display: grid; row-gap: 5px; min-width: 0; }
+    .brand-name { font-size: 1.3rem; line-height: 1.16; font-weight: 800; letter-spacing: -.02em; color: var(--ink); white-space: nowrap; }
     .brand-name em { font-style: normal; color: var(--amber-2); }
-    .brand-tag { font-family: "IBM Plex Mono", monospace; font-size: .6rem; letter-spacing: .14em; color: var(--muted); white-space: nowrap; }
-    .header-right { display: flex; align-items: center; gap: 26px; }
+    .brand-tag { font-family: "IBM Plex Mono", monospace; font-size: .6rem; line-height: 1.4; letter-spacing: .14em; color: var(--muted); white-space: nowrap; }
+    .header-right { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 26px; min-width: 0; }
     .brand-img-dark { display: none; }
     @media (prefers-color-scheme: dark) {
       .brand-img-light { display: none; }
@@ -311,6 +314,7 @@
     @media (max-width: 840px) {
       .wrap { width: min(100% - 28px, 700px); }
       nav a:not(.nav-cta) { display: none; }
+      .header-right .availability { display: none; }
       .hero { padding-top: 48px; }
       .hero-grid, .fit-grid { grid-template-columns: 1fr; }
       .hero-visual { min-height: 430px; max-width: 600px; width: 100%; }
@@ -325,11 +329,11 @@
       .process { padding: 34px 26px; }
     }
     @media (max-width: 520px) {
-      .utility { min-height: 58px; }
+      .utility { min-height: 58px; flex-direction: column; align-items: flex-start; row-gap: 10px; padding-block: 12px; }
       .brand { gap: 10px; }
       .brand img { width: 36px; height: 36px; }
       .brand-name { font-size: 1.12rem; }
-      .brand-tag { font-size: .54rem; letter-spacing: .11em; }
+      .brand-tag { font-size: .54rem; letter-spacing: .11em; white-space: normal; line-height: 1.45; }
       .header-right { gap: 14px; }
       .header-right .availability { display: none; }
       .availability { font-size: .64rem; }
