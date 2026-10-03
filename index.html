@@ -451,7 +451,7 @@
     '/construction-progress': '/construction-progress/',
     '/contact': '/contact/'
   };
-  var h = location.hash;
+  var h = location.hash.replace(/^#/, "");
   if (h && map[h]) { location.replace(map[h]); }
 }());
 </script>
