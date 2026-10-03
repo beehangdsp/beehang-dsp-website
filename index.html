@@ -345,6 +345,7 @@
     .confirm-icon svg { width: 26px; height: 26px; }
     .confirm h3 { margin: 0 0 10px; font-size: 1.5rem; letter-spacing: -.02em; }
     .confirm p { margin: 0 0 22px; color: var(--muted); }
+    .confirm-actions { display: flex; flex-wrap: wrap; gap: 12px; }
     .page-cta .cta-alt { display: block; margin-top: 14px; text-align: center; color: #c7d4d9; font-size: .85rem; }
     .page-cta .cta-alt a { color: var(--amber); }
     button.button { cursor: pointer; font-family: inherit; font-size: 1rem; }
@@ -822,7 +823,7 @@
                     '</div>' +
                   '</form>' +
                 '</div>' +
-                '<p class="form-note">Prefer email? <a href="mailto:beehangdsp@gmail.com">beehangdsp@gmail.com</a> &mdash; San Francisco Bay Area.</p>' +
+                '<p class="form-note">Prefer email? <a href="mailto:beehangdsp@gmail.com">beehangdsp@gmail.com</a> &middot; <a href="https://cal.com/beehangdsp/15-min-intro-call" target="_blank" rel="noopener">Book a call</a> &mdash; San Francisco Bay Area.</p>' +
               '</div>' +
               '<aside class="page-side">' +
                 '<div class="side-card"><h3>What happens next</h3><ul>' +
@@ -916,7 +917,11 @@
                 '<div class="confirm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg></div>' +
                 '<h3>Message sent</h3>' +
                 '<p>Thanks for reaching out &mdash; we usually reply within one business day.</p>' +
-                '<a class="button secondary" href="#">Back to home</a>' +
+                '<p>Prefer to talk first? Book a 15-min intro call.</p>' +
+                '<div class="confirm-actions">' +
+                  '<a class="button primary" href="https://cal.com/beehangdsp/15-min-intro-call" target="_blank" rel="noopener">Book a 15-min intro call</a>' +
+                  '<a class="button secondary" href="#">Back to home</a>' +
+                '</div>' +
               '</div>';
             card.setAttribute('tabindex', '-1');
             card.focus();
